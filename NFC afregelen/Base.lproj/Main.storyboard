@@ -696,7 +696,7 @@
                                         </textField>
                                         <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfm-4h-h8u" userLabel="FrequencyField" customClass="LockedField" customModule="NFC_afregelen" customModuleProvider="target">
                                             <rect key="frame" x="40" y="70" width="127" height="22"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="16" drawsBackground="YES" id="4xB-vS-nEC">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="16" drawsBackground="YES" id="4xB-vS-nEC">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -706,31 +706,43 @@
                                             </textFieldCell>
                                             <connections>
                                                 <action selector="update:" target="XfG-lQ-9wD" id="2XF-wd-MkM"/>
-                                                <binding destination="XfG-lQ-9wD" name="value" keyPath="self.frequency" id="q4s-R4-uKN"/>
+                                                <binding destination="XfG-lQ-9wD" name="value" keyPath="self.frequency" id="wEg-wO-9Vr">
+                                                    <dictionary key="options">
+                                                        <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="biy-ki-1Zm" userLabel="InductivityField" customClass="LockedField" customModule="NFC_afregelen" customModuleProvider="target">
                                             <rect key="frame" x="40" y="42" width="127" height="22"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="g1d-rt-9w4">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="g1d-rt-9w4">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
                                                 <action selector="update:" target="XfG-lQ-9wD" id="Ux5-1y-Bfa"/>
-                                                <binding destination="XfG-lQ-9wD" name="value" keyPath="self.inductivity" id="mOD-1r-QTM"/>
+                                                <binding destination="XfG-lQ-9wD" name="value" keyPath="self.inductivity" id="pNy-ys-AzR">
+                                                    <dictionary key="options">
+                                                        <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVt-jG-KlI" userLabel="CapacityField" customClass="LockedField" customModule="NFC_afregelen" customModuleProvider="target">
                                             <rect key="frame" x="40" y="14" width="127" height="22"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="nJ6-75-lDE">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="nJ6-75-lDE">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
                                                 <action selector="update:" target="XfG-lQ-9wD" id="k9Q-uo-iZI"/>
-                                                <binding destination="XfG-lQ-9wD" name="value" keyPath="self.capacity" id="Cto-AM-2u6"/>
+                                                <binding destination="XfG-lQ-9wD" name="value" keyPath="self.capacity" id="MoD-bz-6zj">
+                                                    <dictionary key="options">
+                                                        <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                    </dictionary>
+                                                </binding>
                                             </connections>
                                         </textField>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-4h-GDW" customClass="LockButton" customModule="NFC_afregelen" customModuleProvider="target">
@@ -1000,6 +1012,16 @@
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="An6-Oi-u6V">
+                                <rect key="frame" x="47" y="112" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rh7-Fx-upS">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="test:" target="XfG-lQ-9wD" id="1Kr-VA-VjP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="UxY-Ff-rw6" firstAttribute="width" secondItem="VrP-FN-mRW" secondAttribute="width" id="3m9-PJ-EwW"/>
@@ -1020,7 +1042,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97.5" y="614"/>
+            <point key="canvasLocation" x="75.5" y="623"/>
         </scene>
     </scenes>
 </document>

@@ -8,30 +8,22 @@
 
 import Cocoa
 
-let π2 = M_1_PI * 2.0
+let π2 = M_PI * 2.0
 
 enum Variable: Int {
 	case frequency = 0, capacity, inductivity
 }
 
-let variables: Set<Variable> = [.frequency, .capacity, .inductivity]
+let variables: Set<Variable> = [.frequency, .inductivity, .capacity]
 
 class ViewController: NSViewController {
 	@IBOutlet var frequencyField: LockedField!
 	@IBOutlet var capacityField: LockedField!
 	@IBOutlet var inductivityField: LockedField!
 	
-	func calculateInductivity() {
-		L = 1.0 / (pow(π2 * f, 2.0) * C)
-	}
-	
-	func calculateCapacity() {
-		C = 1.0 / (pow(π2 * f, 2.0) * L)
-	}
-	
-	func calculateFrequency() {
-		f = 1.0 / (π2 * sqrt(L * C))
-	}
+	func calculateInductivity() { L = 1.0 / (pow(π2 * f, 2.0) * C) }
+	func calculateCapacity()    { C = 1.0 / (pow(π2 * f, 2.0) * L) }
+	func calculateFrequency()   { f = 1.0 / (π2 * sqrt(L * C)) }
 	
 	@IBAction func update(sender: LockedField) {
 		let variable = variables.subtract([getVariable(sender), lock]).first!
@@ -52,7 +44,9 @@ class ViewController: NSViewController {
 	}
 	
 	@IBAction func clickLock(sender: LockButton) {
-		lock = getVariable(sender.control as! LockedField)
+		if !(sender.control as! LockedField).inFocus {
+			lock = getVariable(sender.control as! LockedField)
+		}
 	}
 	
 	dynamic var frequencyLock:   String {get { return lock == .frequency   ? "🔒" : "🔓" }}
@@ -63,23 +57,16 @@ class ViewController: NSViewController {
 	dynamic var capacity:  NSNumber = 0
 	dynamic var inductivity: NSNumber = 0
 	
-	var f: Double {
-		get { return frequency.doubleValue * 1000000.0 }
-		set { frequency = newValue / 1000000.0 }
-	}
-	var L: Double {
-		get { return Double(inductivity) / 1000000.0 }
-		set { inductivity = newValue * 1000000.0 }
-	}
-	var C: Double {
-		get { return Double(capacity) / 1000000000000.0 }
-		set { capacity = newValue * 1000000000000.0 }
-	}
-	
 	override func viewDidLoad() {
 		for variable in variables {
 			getField(variable).onFocus = { self.lock = variables.subtract([variable]).first! }
 		}
+	}
+	@IBAction func test(sender: AnyObject) {
+		for (x,y) in ["f": self.frequencyField, "i":self.inductivityField, "c":self.capacityField] {
+			print("\(x):\(y.inFocus) ")
+		}
+		println()
 	}
 }
 
@@ -112,6 +99,19 @@ extension ViewController {
 			assertionFailure("incorrect field")
 			return .capacity
 		}
+	}
+
+	var f: Double {
+		get { return frequency.doubleValue * 1000000.0 }
+		set { frequency = newValue / 1000000.0 }
+	}
+	var L: Double {
+			get { return Double(inductivity) / 1000000.0 }
+			set { inductivity = newValue * 1000000.0 }
+	}
+	var C: Double {
+			get { return Double(capacity) / 1000000000000.0 }
+			set { capacity = newValue * 1000000000000.0 }
 	}
 }
 

@@ -12,11 +12,23 @@ class LockedField: NSTextField {
 
 	var onFocus: (()->())?
 	var lock: LockButton!
+	var inFocus = false
 	
 	override func becomeFirstResponder() -> Bool {
 		let becomes = super.becomeFirstResponder()
-		if  becomes { onFocus?() }
+		if  becomes {
+			onFocus?()
+			inFocus = true
+		}
 		return becomes
+	}
+	
+	override func resignFirstResponder() -> Bool {
+		let filter = super.resignFirstResponder()
+		if filter {
+			inFocus = false
+		}
+		return filter
 	}
     
 }
