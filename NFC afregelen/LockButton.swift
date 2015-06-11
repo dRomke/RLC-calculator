@@ -9,5 +9,11 @@
 import Cocoa
 
 class LockButton: NSButton {
-	@IBOutlet var control: NSControl!
+	@IBOutlet var control: NSControl! {
+		didSet {
+			if let lockField = control as? LockedField {
+				lockField.lock = self
+			}
+		}
+	}
 }
