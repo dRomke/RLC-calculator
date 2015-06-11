@@ -62,12 +62,6 @@ class ViewController: NSViewController {
 			getField(variable).onFocus = { self.lock = variables.subtract([variable]).first! }
 		}
 	}
-	@IBAction func test(sender: AnyObject) {
-		for (x,y) in ["f": self.frequencyField, "i":self.inductivityField, "c":self.capacityField] {
-			print("\(x):\(y.inFocus) ")
-		}
-		println()
-	}
 }
 
 extension ViewController {

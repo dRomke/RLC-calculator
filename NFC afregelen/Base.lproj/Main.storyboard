@@ -672,7 +672,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="485" height="140"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box autoresizesSubviews="NO" misplaced="YES" title="Box" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="VrP-FN-mRW">
+                            <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="VrP-FN-mRW">
                                 <rect key="frame" x="17" y="16" width="224" height="106"/>
                                 <view key="contentView">
                                     <rect key="frame" x="1" y="1" width="222" height="104"/>
@@ -694,7 +694,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfm-4h-h8u" userLabel="FrequencyField" customClass="LockedField" customModule="NFC_afregelen" customModuleProvider="target">
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yfm-4h-h8u" userLabel="FrequencyField" customClass="LockedField" customModule="NFC_afregelen" customModuleProvider="target">
                                             <rect key="frame" x="40" y="70" width="127" height="22"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="16" drawsBackground="YES" id="4xB-vS-nEC">
                                                 <font key="font" metaFont="system"/>
@@ -713,7 +713,7 @@
                                                 </binding>
                                             </connections>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="biy-ki-1Zm" userLabel="InductivityField" customClass="LockedField" customModule="NFC_afregelen" customModuleProvider="target">
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="biy-ki-1Zm" userLabel="InductivityField" customClass="LockedField" customModule="NFC_afregelen" customModuleProvider="target">
                                             <rect key="frame" x="40" y="42" width="127" height="22"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="g1d-rt-9w4">
                                                 <font key="font" metaFont="system"/>
@@ -729,7 +729,7 @@
                                                 </binding>
                                             </connections>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVt-jG-KlI" userLabel="CapacityField" customClass="LockedField" customModule="NFC_afregelen" customModuleProvider="target">
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XVt-jG-KlI" userLabel="CapacityField" customClass="LockedField" customModule="NFC_afregelen" customModuleProvider="target">
                                             <rect key="frame" x="40" y="14" width="127" height="22"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="nJ6-75-lDE">
                                                 <font key="font" metaFont="system"/>
@@ -781,7 +781,7 @@
                                                 <outlet property="control" destination="XVt-jG-KlI" id="ntu-1V-7ge"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="At9-hQ-NbT">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="At9-hQ-NbT">
                                             <rect key="frame" x="173" y="72" width="33" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MHz" id="hkh-df-RMr">
                                                 <font key="font" metaFont="system"/>
@@ -789,7 +789,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="osm-de-DWM">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="osm-de-DWM">
                                             <rect key="frame" x="173" y="44" width="22" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="µH" id="c2b-x7-F5t">
                                                 <font key="font" metaFont="system"/>
@@ -797,7 +797,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5Z-n2-x2C">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x5Z-n2-x2C">
                                             <rect key="frame" x="173" y="16" width="20" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="pF" id="YpB-aa-Ob3">
                                                 <font key="font" metaFont="system"/>
@@ -851,7 +851,7 @@
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
-                            <box autoresizesSubviews="NO" misplaced="YES" title="Box" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="UxY-Ff-rw6">
+                            <box autoresizesSubviews="NO" title="Box" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="UxY-Ff-rw6">
                                 <rect key="frame" x="243" y="16" width="225" height="106"/>
                                 <view key="contentView">
                                     <rect key="frame" x="1" y="1" width="223" height="104"/>
@@ -873,7 +873,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktL-2K-YgX" userLabel="FrequencyField">
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ktL-2K-YgX" userLabel="FrequencyField">
                                             <rect key="frame" x="52" y="70" width="116" height="22"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" title="16" drawsBackground="YES" id="1UL-Hc-u3w">
                                                 <font key="font" metaFont="system"/>
@@ -887,7 +887,7 @@
                                                 <binding destination="XfG-lQ-9wD" name="value" keyPath="self.frequency" id="37T-Mn-mXp"/>
                                             </connections>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wye-kd-Mix" userLabel="InductivityField">
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wye-kd-Mix" userLabel="InductivityField">
                                             <rect key="frame" x="52" y="42" width="116" height="22"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="yXM-7f-c6g">
                                                 <font key="font" metaFont="system"/>
@@ -898,7 +898,7 @@
                                                 <binding destination="XfG-lQ-9wD" name="value" keyPath="self.inductivity" id="JuY-Bi-D1Y"/>
                                             </connections>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-Yk-3PJ" userLabel="CapacityField">
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gIf-Yk-3PJ" userLabel="CapacityField">
                                             <rect key="frame" x="52" y="14" width="116" height="22"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="KFu-cH-ku4">
                                                 <font key="font" metaFont="system"/>
@@ -942,7 +942,7 @@
                                                 <outlet property="control" destination="gIf-Yk-3PJ" id="80K-Ra-I9O"/>
                                             </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P4Q-EM-haY">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P4Q-EM-haY">
                                             <rect key="frame" x="174" y="72" width="33" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MHz" id="yz4-VE-mst">
                                                 <font key="font" metaFont="system"/>
@@ -950,7 +950,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exE-bf-0bG">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="exE-bf-0bG">
                                             <rect key="frame" x="174" y="44" width="12" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="?" id="I8L-z2-oAJ">
                                                 <font key="font" metaFont="system"/>
@@ -958,7 +958,7 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGm-4R-HUg">
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aGm-4R-HUg">
                                             <rect key="frame" x="174" y="16" width="15" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ω" id="PVp-zM-575">
                                                 <font key="font" metaFont="system"/>
@@ -1012,16 +1012,6 @@
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="An6-Oi-u6V">
-                                <rect key="frame" x="47" y="112" width="82" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rh7-Fx-upS">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="test:" target="XfG-lQ-9wD" id="1Kr-VA-VjP"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="UxY-Ff-rw6" firstAttribute="width" secondItem="VrP-FN-mRW" secondAttribute="width" id="3m9-PJ-EwW"/>

@@ -10,25 +10,20 @@ import Cocoa
 
 class LockedField: NSTextField {
 
-	var onFocus: (()->())?
 	var lock: LockButton!
-	var inFocus = false
+	
+	var onFocus: (()->())?
+	var inFocus: Bool {
+		if let delegate: NSObject = (NSApp.keyWindow??.firstResponder as? NSText)?.delegate as? NSObject {
+			return self == delegate
+		}
+		return false
+	}
 	
 	override func becomeFirstResponder() -> Bool {
 		let becomes = super.becomeFirstResponder()
-		if  becomes {
-			onFocus?()
-			inFocus = true
-		}
+		if  becomes { onFocus?() }
 		return becomes
-	}
-	
-	override func resignFirstResponder() -> Bool {
-		let filter = super.resignFirstResponder()
-		if filter {
-			inFocus = false
-		}
-		return filter
 	}
     
 }
