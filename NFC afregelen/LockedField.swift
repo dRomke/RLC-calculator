@@ -14,7 +14,7 @@ class LockedField: NSTextField {
 	
 	var onFocus: (()->())?
 	var inFocus: Bool {
-		if let delegate: NSObject = (NSApp.keyWindow??.firstResponder as? NSText)?.delegate as? NSObject {
+		if let delegate: NSObject = (NSApp.keyWindow?.firstResponder as? NSText)?.delegate as? NSObject {
 			return self == delegate
 		}
 		return false

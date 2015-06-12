@@ -15,6 +15,8 @@
 		7429B1211B298ED600894E6C /* LockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B1201B298ED600894E6C /* LockButton.swift */; };
 		7429B1251B29A91100894E6C /* LockedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B1241B29A91100894E6C /* LockedField.swift */; };
 		7429B1291B29B19200894E6C /* NumberTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429B1281B29B19200894E6C /* NumberTransformer.swift */; };
+		74C66EEB1B2A281D002D5CBA /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C66EEA1B2A281D002D5CBA /* Equation.swift */; };
+		74D91B721B2A332800EF1917 /* EquationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D91B711B2A332800EF1917 /* EquationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		7429B1201B298ED600894E6C /* LockButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockButton.swift; sourceTree = "<group>"; };
 		7429B1241B29A91100894E6C /* LockedField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockedField.swift; sourceTree = "<group>"; };
 		7429B1281B29B19200894E6C /* NumberTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTransformer.swift; sourceTree = "<group>"; };
+		74C66EEA1B2A281D002D5CBA /* Equation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equation.swift; sourceTree = "<group>"; };
+		74D91B711B2A332800EF1917 /* EquationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 			children = (
 				3C80D5E11B28CE5900445FC8 /* AppDelegate.swift */,
 				3C80D5E31B28CE5900445FC8 /* ViewController.swift */,
+				74D91B711B2A332800EF1917 /* EquationViewController.swift */,
+				74C66EEA1B2A281D002D5CBA /* Equation.swift */,
 				7429B1241B29A91100894E6C /* LockedField.swift */,
 				7429B1201B298ED600894E6C /* LockButton.swift */,
 				3C80D5E51B28CE5900445FC8 /* Images.xcassets */,
@@ -163,7 +169,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Romuald Dufaux";
 				TargetAttributes = {
 					3C80D5DB1B28CE5900445FC8 = {
@@ -218,11 +224,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C66EEB1B2A281D002D5CBA /* Equation.swift in Sources */,
 				7429B1211B298ED600894E6C /* LockButton.swift in Sources */,
 				7429B1291B29B19200894E6C /* NumberTransformer.swift in Sources */,
 				3C80D5E41B28CE5900445FC8 /* ViewController.swift in Sources */,
 				7429B1251B29A91100894E6C /* LockedField.swift in Sources */,
 				3C80D5E21B28CE5900445FC8 /* AppDelegate.swift in Sources */,
+				74D91B721B2A332800EF1917 /* EquationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -343,6 +352,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "NFC afregelen/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wow-Factor.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -354,6 +364,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "NFC afregelen/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wow-Factor.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -373,6 +384,7 @@
 				);
 				INFOPLIST_FILE = "NFC afregelenTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wow-Factor.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NFC afregelen.app/Contents/MacOS/NFC afregelen";
 			};
@@ -389,6 +401,7 @@
 				);
 				INFOPLIST_FILE = "NFC afregelenTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wow-Factor.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NFC afregelen.app/Contents/MacOS/NFC afregelen";
 			};

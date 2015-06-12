@@ -8,7 +8,6 @@
 
 import Cocoa
 
-let π2 = M_PI * 2.0
 
 enum Variable: Int {
 	case frequency = 0, capacity, inductivity
@@ -53,7 +52,7 @@ class ViewController: NSViewController {
 	dynamic var capacityLock:    String {get { return lock == .capacity    ? "🔒" : "🔓" }}
 	dynamic var inductivityLock: String {get { return lock == .inductivity ? "🔒" : "🔓" }}
 
-	dynamic var frequency: NSNumber = 0
+	dynamic var frequency: NSNumber = 16
 	dynamic var capacity:  NSNumber = 0
 	dynamic var inductivity: NSNumber = 0
 	
